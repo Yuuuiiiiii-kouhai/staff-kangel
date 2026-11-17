@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KangelSP Staff Application</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page-shell">
+    <header class="topbar">
+      <strong>KangelSP</strong>
+      <span>Staff Application</span>
+    </header>
+
+    <form id="applicationForm" novalidate>
+      <section class="panel">
+        <h1>Join the KangelSP team</h1>
+
+        <div class="fields">
+          <label>
+            Name / Nickname
+            <input name="name" required />
+          </label>
+
+          <label>
+            Discord ID
+            <input name="discord_id" required />
+          </label>
+
+          <label>
+            Timezone
+            <input name="timezone" required />
+          </label>
+
+          <label>
+            Online time
+            <input name="online_time" required />
+          </label>
+
+          <label>
+            Age
+            <input name="age" type="number" min="13" max="99" required />
+          </label>
+
+          <label class="wide">
+            Previous experience
+            <textarea name="experience" rows="4" required></textarea>
+          </label>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Multiple Choice</h2>
+        <div id="mcQuestions"></div>
+      </section>
+
+      <section class="panel">
+        <h2>True or False</h2>
+        <div id="tfQuestions"></div>
+      </section>
+
+      <section class="panel">
+        <h2>Written Questions</h2>
+        <div id="writtenQuestions"></div>
+      </section>
+
+      <section class="panel submit-panel">
+        <label class="consent">
+          <input type="checkbox" id="consent" required />
+          <span>I agree to submit this application fairly.</span>
+        </label>
+
+        <button type="submit">Generate Application</button>
+        <p id="message" aria-live="polite"></p>
+      </section>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
